@@ -1,0 +1,330 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+
+/* 颜色变量 */
+
+/* 行为相关颜色 */
+$uni-color-primary: #007aff;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+/* 文字基本颜色 */
+$uni-text-color:#333;//基本色
+$uni-text-color-inverse:#fff;//反色
+$uni-text-color-grey:#999;//辅助灰色，如加载更多的提示信息
+$uni-text-color-placeholder: #808080;
+$uni-text-color-disable:#c0c0c0;
+
+/* 背景颜色 */
+$uni-bg-color:#242A37;
+$uni-bg-color-grey:#f8f8f8;
+$uni-bg-color-hover:#f1f1f1;//点击状态颜色
+$uni-bg-color-mask:rgba(0, 0, 0, 0.4);//遮罩颜色
+
+/* 边框颜色 */
+$uni-border-color:#e5e5e5;
+
+/* 尺寸变量 */
+
+/* 文字尺寸 */
+$uni-font-size-sm:24rpx;
+$uni-font-size-base:28rpx;
+$uni-font-size-lg:32rpx;
+
+$font_size_44: 44rpx;
+$font_size_40: 40rpx;
+$font_size_36: 36rpx;
+$font_size_34: 34rpx;
+$font_size_32: 32rpx;
+$font_size_30: 30rpx;
+$font_size_26: 26rpx;
+$font_size_24: 24rpx;
+$font_size_22: 22rpx;
+$font_size_20: 20rpx;
+
+$font_color_ffffff: #ffffff;
+$font_color_7F7F7F: #7F7F7F;
+$font_color_4E586E: #4E586E;
+$font_color_42C4B3: #42C4B3;
+$font_color_505C75: #505C75;
+$font_color_C4C4C4: #C4C4C4;
+$font_color_B4BCCB: #B4BCCB;
+$font_color_344463: #344463;
+
+
+
+/* 图片尺寸 */
+$uni-img-size-sm:40rpx;
+$uni-img-size-base:52rpx;
+$uni-img-size-lg:80rpx;
+
+/* Border Radius */
+$uni-border-radius-sm: 4rpx;
+$uni-border-radius-base: 6rpx;
+$uni-border-radius-lg: 12rpx;
+$uni-border-radius-circle: 50%;
+
+/* 水平间距 */
+$uni-spacing-row-sm: 10px;
+$uni-spacing-row-base: 20rpx;
+$uni-spacing-row-lg: 30rpx;
+
+/* 垂直间距 */
+$uni-spacing-col-sm: 8rpx;
+$uni-spacing-col-base: 16rpx;
+$uni-spacing-col-lg: 24rpx;
+
+/* 透明度 */
+$uni-opacity-disabled: 0.3; // 组件禁用态的透明度
+
+/* 文章场景相关 */
+$uni-color-title: #2C405A; // 文章标题颜色
+$uni-font-size-title:40rpx;
+$uni-color-subtitle: #555555; // 二级标题颜色
+$uni-font-size-subtitle:36rpx;
+$uni-color-paragraph: #3F536E; // 文章段落颜色
+$uni-font-size-paragraph:30rpx;
+
+.flex1{
+	flex: 1;
+}
+
+.mt_80{
+	margin-top: 80rpx;
+}
+.mt_55{
+	margin-top: 55rpx;
+}
+.mt_30{
+	margin-top: 30rpx;
+}
+.mt_15{
+	margin-top: 15rpx;
+}
+.ml_190{
+	margin-left: 190rpx;
+}
+.padd_top_30{
+	padding-top: 30rpx;
+}
+.padd_h_60{
+	padding-left: 60rpx;
+	padding-right: 60rpx;
+}
+.padd_h_30{
+	padding-left: 30rpx;
+	padding-right: 30rpx;
+}
+.padd_h_48{
+	padding-left: 48rpx;
+	padding-right: 48rpx;
+}
+
+.lHeight_40{
+	line-height: 40rpx;
+}
+.flex_h_between_center{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex_h_start_center{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.flex_h_center_start{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+.flex_h_end_start{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+.flex_h_end_center{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+.flex_h_center_center{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.flex_h_start_start{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.flex_v_start_center{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.flex_v_center_start{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.flex_v_between_center{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex_v_center_center{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.flex_v_start_start{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.fStyle44ffffffw800{
+	font-weight: 800;
+	font-size: $font_size_44;
+	color: $font_color_ffffff;
+}
+
+.fStyle40ffffffw600{
+	font-weight: 600;
+	font-size: $font_size_40;
+	color: $font_color_ffffff;
+}
+.fStyle36ffffffw600{
+	font-weight: 600;
+	font-size: $font_size_36;
+	color: $font_color_ffffff;
+}
+.fStyle34ffffffw800{
+	font-weight: 800;
+	font-size: $font_size_34;
+	color: $font_color_ffffff;
+}
+.fStyle32FFFFFFw600{
+	font-weight: 600;
+	font-size: $font_size_32;
+	color: $font_color_ffffff;
+}
+.fStyle30FFFFFF{
+	font-size: $font_size_30;
+	color: $font_color_ffffff;
+}
+.fStyle30FFFFFFw600{
+	font-weight: 600;
+	font-size: $font_size_30;
+	color: $font_color_ffffff;
+}
+.fStyle30FFFFFFw900{
+	font-weight: 900;
+	font-size: $font_size_30;
+	color: $font_color_ffffff;
+}
+.fStyle3042C4B3w600{
+	font-weight: 600;
+	font-size: $font_size_30;
+	color: $font_color_42C4B3;
+}
+.fStyle30505C75w600{
+	font-weight: 600;
+	font-size: $font_size_30;
+	color: $font_color_505C75;
+}
+.fStyle26505C75{
+	font-size: $font_size_26;
+	color: $font_color_505C75;
+}
+.fStyle26ffffff{
+	font-size: $font_size_26;
+	color: $font_color_ffffff;
+}
+.fStyle26344463{
+	font-size: $font_size_26;
+	color: $font_color_344463;
+}
+.fStyle26B4BCCB{
+	font-size: $font_size_26;
+	color: $font_color_B4BCCB;
+}
+.fStyle264E586E{
+	font-size: $font_size_26;
+	color: $font_color_4E586E;
+}
+.fStyle26C4C4C4{
+	font-size: $font_size_26;
+	color: $font_color_C4C4C4;
+}
+.fStyle247F7F7F{
+	font-size: $font_size_24;
+	color: $font_color_7F7F7F;
+}
+.fStyle24ffffff{
+	font-size: $font_size_24;
+	color: $font_color_ffffff;
+}
+.fStyle22ffffff{
+	font-size: $font_size_22;
+	color: $font_color_ffffff;
+}
+.fStyle22FFFFFFW600{
+	font-size: $font_size_22;
+	color: $font_color_ffffff;
+	font-weight: 600;
+}
+.fStyle227f7f7fW600{
+	font-size: $font_size_22;
+	color: $font_color_7F7F7F;
+	font-weight: 600;
+}
+.fStyle22B4BCCBW500{
+	font-size: $font_size_22;
+	color: $font_color_B4BCCB;
+	font-weight: 500;
+}
+.fStyle2242C4B3{
+	font-size: $font_size_22;
+	color: $font_color_42C4B3;
+}
+.fStyle2242C4B3W600{
+	font-size: $font_size_22;
+	color: $font_color_42C4B3;
+	font-weight: 600;
+}
+.fStyle20ffffff{
+	font-size: $font_size_20;
+	color: $font_color_ffffff;
+}
+
+.ellipse{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}

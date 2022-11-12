@@ -1,0 +1,118 @@
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"titleNView": false,
+			"enablePullDownRefresh": true
+		}
+	}, {
+		"path": "pages/publish/publish",
+		"style": {
+			"titleNView": false
+		}
+	}, {
+		"path": "pages/mine/mine",
+		"style": {
+			"titleNView": false,
+			"enablePullDownRefresh": true
+		}
+	}, {
+		"path": "pages/posterlist/poster_list",
+		"style": {}
+	}, {
+		"path": "pages/usercenter/usercenter",
+		"style": {
+			"titleNView": false
+		}
+	}, {
+		"path": "pages/userlist/userlist",
+		"style": {
+			"navigationBarTitleText": "推荐关注",
+			"enablePullDownRefresh": true,
+			"navigationBarBackgroundColor": "#242A37"
+		}
+	}, {
+		"path": "pages/setting/setting",
+		"style": {
+			"navigationBarTitleText": "设置",
+			"enablePullDownRefresh": true,
+			"navigationBarBackgroundColor": "#242A37"
+		}
+	}, {
+		"path": "pages/edit_user_info/edit_user_info",
+		"style": {
+			"navigationBarTitleText": "编辑个人资料",
+			"enablePullDownRefresh": true,
+			"navigationBarBackgroundColor": "#242A37"
+		}
+	}, {
+		"path": "pages/preview_img/preview_img",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": true,
+			"navigationBarBackgroundColor": "#242A37"
+		}
+	}, {
+		"path": "pages/repeat/repeat",
+		"style": {
+			"titleNView": false
+		}
+	}    ,{
+            "path" : "pages/one_tweet/one_tweet",
+            "style" : {
+				"navigationBarTitleText": "Tweet",
+				"navigationBarBackgroundColor": "#242A37"
+			}
+        }
+        ,{
+            "path" : "pages/croper/croper",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/repeact_list/repeact_list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"navigationBarBackgroundColor": "#242A37",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "EthTweet",
+		"navigationBarBackgroundColor": "#007AFF",
+		"backgroundColor": "#242a37"
+	},
+	"tabBar": {
+		"iconWidth": "22px",
+		"borderStyle": "black",
+		"color": "#4E586E",
+		"selectedColor": "#42C4B3",
+		"backgroundColor": "#20242F",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tabbar/home_curr.png",
+			"selectedIconPath": "static/tabbar/home.png",
+			"text": "Home"
+
+		}, {
+			"pagePath": "pages/publish/publish",
+			"iconPath": "static/tabbar/publish_curr.png",
+			"selectedIconPath": "static/tabbar/publish.png",
+			"text": "Publish"
+
+		}, {
+			"pagePath": "pages/mine/mine",
+			"iconPath": "static/tabbar/mine_curr.png",
+			"selectedIconPath": "static/tabbar/mine.png",
+			"text": "Mine"
+		}]
+	}
+}
