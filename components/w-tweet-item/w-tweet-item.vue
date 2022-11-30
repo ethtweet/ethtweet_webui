@@ -102,7 +102,9 @@
 				}
 				for (var i = 0, len = this.imgUrls.length; i < len; i++) {
 					if (/(http|https):\/\/([\w.]+\/?)\S*/.test(this.imgUrls[i])) {
-
+						this.imgUrls[i].replace("https://wx1.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+						this.imgUrls[i].replace("https://wx2.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+						this.imgUrls[i].replace("https://wx3.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
 					} else {
 						this.imgUrls[i] = this.$api.ipfsResUrl() + this.imgUrls[i];
 					}
