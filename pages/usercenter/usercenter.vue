@@ -10,6 +10,7 @@
 				<text class="fStyle44ffffffw800">{{userInfo && userInfo.Name || '-'}}</text>
 			</view>
 			<view class="position_avatar">
+				<image :src="formatAvatar(userInfo.Avatar)" mode="" v-if="userInfo.Avatar != ''"></image>
 			</view>
 		</view>
 		<view class="ml_190 padd_h_48">
@@ -335,6 +336,13 @@
 					url: '/pages/userlist/userlist?type=myFocusList&userid='+this.userId
 				});
 			},
+			formatAvatar(avatar) {
+				avatar = avatar.replace("https://tvax1.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+				avatar = avatar.replace("https://tvax2.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+				avatar = avatar.replace("https://tvax3.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+				avatar = avatar.replace("https://tvax4.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+				return avatar
+			}
 		}
 
 	}
@@ -359,6 +367,12 @@
 				border: 2rpx solid #FFFFFF;
 				left: 48rpx;
 				border-radius: 160rpx;
+				image {
+					width: 160rpx;
+					height: 160rpx;
+					border-radius: 160rpx;
+					background-color: #ff0;
+				}
 			}
 		}
 

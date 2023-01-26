@@ -3,7 +3,7 @@
 		<view class="flex_h_between_center">
 			<view class="flex1 flex_h_start_center" @click="gotoUserCenter(item && item.UserId)">
 				<view class="avatar_wrap">
-					<image :src="'https://ipfs.io/ipfs/'+item.UserInfo.Avatar" mode="" class="avatar"
+					<image :src="formatAvatar(item.UserInfo.Avatar)" mode="" class="avatar"
 						v-if="item && item.UserInfo && item.UserInfo.Avatar != ''"></image>
 				</view>
 				<view class="flex_v_center_start">
@@ -101,12 +101,15 @@
 					this.imgUrls = this.item.Attachment.split(',');
 				}
 				for (var i = 0, len = this.imgUrls.length; i < len; i++) {
-					if (/(http|https):\/\/([\w.]+\/?)\S*/.test(this.imgUrls[i])) {
-						this.imgUrls[i].replace("https://wx1.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
-						this.imgUrls[i].replace("https://wx2.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
-						this.imgUrls[i].replace("https://wx3.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+					if (this.imgUrls[i].startsWith("http")) {
+						this.imgUrls[i] = this.imgUrls[i].replace("https://wx1.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+						this.imgUrls[i] = this.imgUrls[i].replace("https://wx2.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+						this.imgUrls[i] = this.imgUrls[i].replace("https://wx3.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+						this.imgUrls[i] = this.imgUrls[i].replace("https://wx4.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+
 					} else {
 						this.imgUrls[i] = this.$api.ipfsResUrl() + this.imgUrls[i];
+
 					}
 				}
 				if (this.imgUrls.length == 1) {
@@ -159,6 +162,13 @@
 					content = content.replace(reg, "<a href='$1$2'>$1$2</a>");
 				}
 				return content;
+			},
+			formatAvatar(avatar) {
+				avatar = avatar.replace("https://tvax1.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+				avatar = avatar.replace("https://tvax2.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+				avatar = avatar.replace("https://tvax3.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+				avatar = avatar.replace("https://tvax4.sinaimg.cn/","https://cdn.ipfsscan.io/weibo/")
+				return avatar
 			}
 		}
 	}
