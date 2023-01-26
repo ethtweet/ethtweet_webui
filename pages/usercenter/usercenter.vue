@@ -10,7 +10,7 @@
 				<text class="fStyle44ffffffw800">{{userInfo && userInfo.Name || '-'}}</text>
 			</view>
 			<view class="position_avatar">
-				<image :src="formatAvatar(userInfo.Avatar)" mode="" v-if="userInfo.Avatar != ''"></image>
+				<image :src="formatAvatar(userInfo.Avatar)" mode="" v-if="userInfo != null && userInfo.Avatar != ''"></image>
 			</view>
 		</view>
 		<view class="ml_190 padd_h_48">
